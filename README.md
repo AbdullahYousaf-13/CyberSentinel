@@ -143,6 +143,10 @@ After removing NaN: (1988305, 79)
     # This step is important because CICIDS column names have leading spaces.
     data.rename(columns=lambda x: x.strip(), inplace=True)
 
+**🔹Output Achieved:**
+
+Removed leading and trailing whitespace from the column names.
+
 #### 🔹Step 4 — Encode Labels (Convert Attack Names → Numbers)
 
     from sklearn.preprocessing import LabelEncoder
@@ -152,6 +156,12 @@ After removing NaN: (1988305, 79)
     
     print("Classes:", le.classes_)
 
+**🔹Output Achieved:**
+
+Classes: ['BENIGN' 'Bot' 'DDoS' 'FTP-Patator' 'Infiltration' 'PortScan'
+ 'SSH-Patator' 'Web Attack � Brute Force' 'Web Attack � Sql Injection'
+ 'Web Attack � XSS']
+
 #### 🔹Step 5 — Split Features & Labels
 
     X = data.drop("Label", axis=1)
@@ -159,6 +169,11 @@ After removing NaN: (1988305, 79)
 
     print("Features shape:", X.shape)
     print("Labels shape:", y.shape)
+
+**🔹Output Achieved:**
+
+Features shape: (1988305, 78)
+Labels shape: (1988305,)
 
 #### 🔹Step 6 — Normalize Features (Scaling)
 
@@ -169,6 +184,9 @@ After removing NaN: (1988305, 79)
     
     print("X_scaled shape:", X_scaled.shape)
 
+**🔹Output Achieved:**
+
+X_scaled shape: (1988305, 78)
 
 #### 🔹Extra Step (Not Doing Now)
 
