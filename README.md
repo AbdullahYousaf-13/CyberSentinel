@@ -117,6 +117,10 @@ File: 02_preprocessing.ipynb
     data = pd.read_csv("E:/Programing/CyberSentinel/data/CICIDS2017/merged.csv", low_memory=False)
     print("Loaded merged CSV:", data.shape)
 
+**🔹Output Achieved:**
+
+Loaded merged CSV: (1989801, 79)
+
 
 #### 🔹Step 2 — Replace Infinite Values & Remove NaNs
 
@@ -129,6 +133,10 @@ CICIDS2017 contains invalid values like inf, -inf, and many missing rows.
     data.dropna(inplace=True)
     
     print("After removing NaN:", data.shape)
+
+**🔹Output Achieved:**
+
+After removing NaN: (1988305, 79)
 
 #### 🔹Step 3 — Fix Column Names (remove extra spaces)
 
