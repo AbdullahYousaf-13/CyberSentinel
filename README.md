@@ -188,9 +188,7 @@ Labels shape: (1988305,)
 
 X_scaled shape: (1988305, 78)
 
-#### 🔹Extra Step (Not Doing Now)
-
-##### Save the Preprocessed Data
+#### 🔹Extra Step - Save the Preprocessed Data (Not Doing Now)
 
 At the end of preprocessing, add:
 
