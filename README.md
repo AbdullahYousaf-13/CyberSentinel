@@ -2,7 +2,7 @@
 
 ## AI Development
 
-### 📌 Section 1 — Environment Setup
+### 📌Section 1 — Environment Setup
 
 1. Installed Anaconda
 You installed Anaconda, which provides:
@@ -25,7 +25,7 @@ You installed ML, data processing, and notebook libraries:
 
 ---
 
-### 📌 Section 2 — Project Directory Setup
+### 📌Section 2 — Project Directory Setup
 
 You created a structured folder layout:
 
@@ -46,7 +46,7 @@ E:/Programing/CyberSentinel/data/CICIDS2017/
 
 ---
 
-### 📌 Section 3 — Dataset Preparation (CICIDS 2017)
+### 📌Section 3 — Dataset Preparation (CICIDS 2017)
 
 Downloaded CICIDS 2017 CSV files
 
@@ -71,7 +71,7 @@ This is the most flexible way to temporarily start Jupyter in any directory or o
 
 ---
 
-### 📌 Section 4 — Notebook 01: Loading & Merging Dataset
+### 📌Section 4 — Notebook 01: Loading & Merging Dataset
 
 File: 01_data_loading.ipynb
 
@@ -99,24 +99,17 @@ File: 01_data_loading.ipynb
     
 **🔹Output Achieved:**
 
-Loading: Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv    
-Loading: Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv    
-Loading: Friday-WorkingHours-Morning.pcap_ISCX.csv    
-Loading: Monday-WorkingHours.pcap_ISCX.csv    
-Loading: Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv    
-Loading: Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv    
-Loading: Tuesday-WorkingHours.pcap_ISCX.csv    
-Loading: Wednesday-workingHours.pcap_ISCX.csv    
-Dataset shape: (2830743, 79)    
-Merged dataset saved successfully!    
+Loading: merged.csv        
+Dataset shape: (2830743, 79)        
+Merged dataset saved successfully!        
 
 ---
 
-### 📌 Section 5 — Notebook 02: Data Preprocessing
+### 📌Section 5 — Notebook 02: Data Preprocessing
 
 File: 02_preprocessing.ipynb
 
-#### 🔹 Step 1 — Load the previously merged CSV
+#### 🔹Step 1 — Load the previously merged CSV
 
     import pandas as pd
     import numpy as np
@@ -125,7 +118,7 @@ File: 02_preprocessing.ipynb
     print("Loaded merged CSV:", data.shape)
 
 
-#### 🔹 Step 2 — Replace Infinite Values & Remove NaNs
+#### 🔹Step 2 — Replace Infinite Values & Remove NaNs
 
 CICIDS2017 contains invalid values like inf, -inf, and many missing rows.
 
@@ -137,12 +130,12 @@ CICIDS2017 contains invalid values like inf, -inf, and many missing rows.
     
     print("After removing NaN:", data.shape)
 
-#### 🔹 Step 3 — Fix Column Names (remove extra spaces)
+#### 🔹Step 3 — Fix Column Names (remove extra spaces)
 
     # This step is important because CICIDS column names have leading spaces.
     data.rename(columns=lambda x: x.strip(), inplace=True)
 
-#### 🔹 Step 4 — Encode Labels (Convert Attack Names → Numbers)
+#### 🔹Step 4 — Encode Labels (Convert Attack Names → Numbers)
 
     from sklearn.preprocessing import LabelEncoder
     
@@ -151,7 +144,7 @@ CICIDS2017 contains invalid values like inf, -inf, and many missing rows.
     
     print("Classes:", le.classes_)
 
-#### 🔹 Step 5 — Split Features & Labels
+#### 🔹Step 5 — Split Features & Labels
 
     X = data.drop("Label", axis=1)
     y = data["Label"]
@@ -159,7 +152,7 @@ CICIDS2017 contains invalid values like inf, -inf, and many missing rows.
     print("Features shape:", X.shape)
     print("Labels shape:", y.shape)
 
-####🔹 Step 6 — Normalize Features (Scaling)
+#### 🔹Step 6 — Normalize Features (Scaling)
 
     from sklearn.preprocessing import StandardScaler
     
@@ -169,7 +162,9 @@ CICIDS2017 contains invalid values like inf, -inf, and many missing rows.
     print("X_scaled shape:", X_scaled.shape)
 
 
-#### Save the Preprocessed Data
+#### 🔹Extra Step (Not Doing Now)
+
+##### Save the Preprocessed Data
 
 At the end of preprocessing, add:
 
@@ -196,7 +191,7 @@ Instant resume
 
 ---
 
-### 📌 Section 6 — You Are READY for Model Training
+### 📌Section 6 — You Are READY for Model Training
 
 You have completed:
 
