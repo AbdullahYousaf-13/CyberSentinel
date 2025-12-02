@@ -12,16 +12,16 @@ You installed Anaconda, which provides:
 - Pre-installed ML libraries
 
 2. Created a Dedicated Environment for the Project
-Environment name: cybersentinel
-`conda create -n cybersentinel python=3.9`
-`conda activate cybersentinel`
+Environment name: **cybersentinel**        
+`conda create -n cybersentinel python=3.9`        
+`conda activate cybersentinel`        
 
 3. Installed Required Libraries
 You installed ML, data processing, and notebook libraries:
 
-`pip install numpy pandas scikit-learn matplotlib seaborn jupyter notebook`
-`pip install flask`
-`pip install joblib`
+- `pip install numpy pandas scikit-learn matplotlib seaborn jupyter notebook`        
+- `pip install flask`        
+- `pip install joblib`        
 
 ---
 
